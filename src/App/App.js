@@ -4,7 +4,7 @@ import './App.css'
 import Card from './Components/Card/Card';
 
 function App() {
-      const [results, setPosts] = useState([])
+      const [posts, setPosts] = useState([])
       useEffect(() => {
           axios.get('https://kg3afcrwig.execute-api.eu-central-1.amazonaws.com/PoC/db_crawling%27')
               .then(res => {
@@ -17,7 +17,7 @@ function App() {
       })
       return (
           <div className="card-class">
-                  {results.map((value) => (
+                  {posts.map((value) => (
                     <Card
                         images3={value.image_s3}
                         username={value.id_utente}
