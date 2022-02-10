@@ -62,23 +62,26 @@
 /*# sourceMappingURL=Card.css.map */
 
 .social{
-  float: none;
   width: 60%;
-  margin-left: 40%;
+  float:left;
+  margin: 1em 0 2em 40%;
+  text-align: center;
+}
+
+.card_website:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .card_website{
-  width: 88%;
   margin: 1em 6%;
-  float: left;
-
+  border-radius: 1em;
+  background-color: white;
+  text-decoration: none;
+  padding: 0.5em 12%;
 }
 
-.card_website > input , .card_images3 > input{
-  width: 100%;
-}
-
-.card_website > input:hover , .card_images3 > input:hover{
+.card_website > input:hover{
   text-decoration: underline;
   cursor: pointer;
 }
