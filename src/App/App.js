@@ -18,19 +18,7 @@ function App() {
       return (
           <div className="card-class">
                   {posts.map((value) => (
-                    <Card
-                        images3={value.image_s3}
-                        username={value.id_utente}
-                        post={value.testo_post}
-                        location={value.location}
-                        longitude={value.longitudine}
-                        latitude={value.latitudine}
-                        comprehend={value.sentiment}
-                        rekognition={value.tag_rekognition}
-                        phone={value.phone}
-                        website={value.web_site}
-                        category={value.category}
-                    />
+                   <li key={value.id_post}>{value.testo_post}</li>
                   ))}
           </div>
         )
