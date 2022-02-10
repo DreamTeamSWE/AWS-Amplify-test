@@ -20,9 +20,7 @@ function Card(props) {
           <p className={props.category == null ? 'hidden' : 'card_category'}><span>Categoria:</span> {props.category}</p>
         </div>
         <div className="social">
-          <form className={props.website == null ? 'hidden' : 'card_website'} action={props.website} target="_blank">
-            <input type="submit" value="Vai al sito" />
-          </form>
+          <a className={props.website == null ? 'hidden' : 'card_website'} target="_blank" href={props.website}>Vai al sito</a>
         </div>
       </div>
   );
