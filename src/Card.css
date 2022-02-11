@@ -104,3 +104,7 @@
 .card_latitude, .card_phone, .card_location, .card_post, .card_post{
   word-wrap: break-word;
 }
+
+.titoletto{
+  font-weight: bold;
+}

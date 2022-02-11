@@ -21,19 +21,19 @@ function Fetch() {
                   <img src={'https://dream-team-instagram-images.s3.eu-central-1.amazonaws.com/' + post.image_s3} className={post.image_s3 == "null" ? 'hidden' : 'card_image'} />
                     <div className="info">
                         <h2 className={post.id_utente == "null" ? 'hidden' : 'card_username'}>Utente: {post.id_utente}</h2>
-                        <p className={post.testo_post == "null" ? 'hidden' : 'card_post'}>Post social:{post.testo_post}</p>
-                        <p className={post.location == "null" ? 'hidden' : 'card_location'}>Location: {post.location}</p>
-                        <p className={post.latitudine == "null" ? 'hidden' : 'card_latitude'}>Latitudine: {post.latitudine}</p>
-                        <p className={post.longitudine == "null" ? 'hidden' : 'card_longitude'}>Longitudine: {post.longitudine}</p>
-                        <p className={post.phone == "null" ? 'hidden' : 'card_phone'}>Numero di telefono: {post.phone}</p>
+                        <p className={post.testo_post == "null" ? 'hidden' : 'card_post'}><span className="titoletto">Post social: </span>{post.testo_post}</p>
+                        <p className={post.location == "null" ? 'hidden' : 'card_location'}><span className="titoletto">Location:</span> {post.location}</p>
+                        <p className={post.latitudine == "null" ? 'hidden' : 'card_latitude'}><span className="titoletto">Latitudine:</span> {post.latitudine}</p>
+                        <p className={post.longitudine == "null" ? 'hidden' : 'card_longitude'}><span className="titoletto">Longitudine:</span> {post.longitudine}</p>
+                        <p className={post.phone == "null" ? 'hidden' : 'card_phone'}><span className="titoletto">Numero di telefono:</span> {post.phone}</p>
                     </div>
                     <div className="result">
-                        <p className={post.sentiment == "null" ? 'hidden' : 'card_comprehend'}>Comprehend: {post.sentiment}</p>
-                        <p className={post.tag_rekognition == "null" ? 'hidden' : 'card_rekognition'}>Rekognition: {post.tag_rekognition}</p>
-                        <p className={post.emotion_rekognition == "null" ? 'hidden' : 'card_rekognition'}>Emotion Rekognition: {post.emotion_rekognition}</p>
-                        <p className={post.category == "null" ? 'hidden' : 'card_category'}>Categoria: {post.category}</p>
+                        <p className={post.sentiment == "null" ? 'hidden' : 'card_comprehend'}><span className="titoletto">Comprehend: </span> {post.sentiment}</p>
+                        <p className={post.tag_rekognition == "null" ? 'hidden' : 'card_rekognition'}><span className="titoletto">Rekognition:</span> {post.tag_rekognition}</p>
+                        <p className={post.emotion_rekognition == "null" ? 'hidden' : 'card_rekognition'}><span className="titoletto">Emotion Rekognition:</span> {post.emotion_rekognition}</p>
+                        <p className={post.category == "null" ? 'hidden' : 'card_category'}><span className="titoletto">Categoria:</span> {post.category}</p>
                     </div>
-                    <div className="social">
+                    <div className={post.web_site == "null" ? 'hidden' : 'social'}>
                         <a className={post.web_site == "null" ? 'hidden' : 'card_website'} href={post.web_site} target="_blank">Vai al sito</a>
                     </div>
                 </div>
