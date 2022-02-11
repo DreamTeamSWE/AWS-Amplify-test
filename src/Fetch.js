@@ -14,7 +14,7 @@ function Fetch() {
             })
     })
     return (
-        <div>
+        <div className="results">
             {posts.map((post) => (
                 <div className="card">
                     <img src={'https://dream-team-instagram-images.s3.eu-central-1.amazonaws.com/' + post.image_s3} className={post.image_s3 == null ? 'hidden' : 'card_image'} />
@@ -32,9 +32,7 @@ function Fetch() {
                         <p className={post.category == null ? 'hidden' : 'card_category'}><span>Categoria:</span> {post.category}</p>
                     </div>
                     <div className="social">
-                        <form className={post.web_site == null ? 'hidden' : 'card_website'} action={post.web_site}>
-                            <input type="submit" value="Vai al sito" />
-                        </form>
+                        <a className={post.web_site == null ? 'hidden' : 'card_website'} href={post.web_site} target="_blank">Vai al sito</a>
                     </div>
                 </div>
             ))}
