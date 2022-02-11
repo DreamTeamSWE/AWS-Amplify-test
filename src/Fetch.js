@@ -20,9 +20,9 @@ function Fetch() {
                 <div className="card">
                   <img src={'https://dream-team-instagram-images.s3.eu-central-1.amazonaws.com/' + post.image_s3} className={post.image_s3 == "null" ? 'hidden' : 'card_image'} />
                     <div className="info">
-                        <h2 className={post.id_utente == "null" ? 'hidden' : 'card_username'}>Utente: {post.id_utente}</h2>
+                        <h2 className={post.location == "null" ? 'hidden' : 'card_location'}>{post.location}</h2>
                         <p className={post.testo_post == "null" ? 'hidden' : 'card_post'}><span className="titoletto">Post social: </span>{post.testo_post}</p>
-                        <p className={post.location == "null" ? 'hidden' : 'card_location'}><span className="titoletto">Location:</span> {post.location}</p>
+                        <p className={post.id_utente == "null" ? 'hidden' : 'card_username'}><span className="titoletto">Utente:</span> {post.id_utente}</p>
                         <p className={post.latitudine == "null" ? 'hidden' : 'card_latitude'}><span className="titoletto">Latitudine:</span> {post.latitudine}</p>
                         <p className={post.longitudine == "null" ? 'hidden' : 'card_longitude'}><span className="titoletto">Longitudine:</span> {post.longitudine}</p>
                         <p className={post.phone == "null" ? 'hidden' : 'card_phone'}><span className="titoletto">Numero di telefono:</span> {post.phone}</p>
