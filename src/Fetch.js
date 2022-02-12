@@ -1,6 +1,11 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import './Card.css';
+
+//<div className={post.image_s3 == "null" ? 'hidden' : 'card_image'} style={{backgroundImage: 'https://dream-team-instagram-images.s3.eu-central-1.amazonaws.com/ + post.image_s3 ' }}>
+//</div>
+//<img src={'https://dream-team-instagram-images.s3.eu-central-1.amazonaws.com/' + post.image_s3} className={post.image_s3 == "null" ? 'hidden' : 'card_image'} alt=" "/>
+
 function Fetch() {
     const [posts, setPosts] = useState([])
     useEffect(() => {
@@ -18,7 +23,9 @@ function Fetch() {
         <div className="results">
             {posts.map((post) => (
                 <div className="card">
-                  <img src={'https://dream-team-instagram-images.s3.eu-central-1.amazonaws.com/' + post.image_s3} className={post.image_s3 == "null" ? 'hidden' : 'card_image'} />
+                    <div className="immagine">
+                      <img src={'https://dream-team-instagram-images.s3.eu-central-1.amazonaws.com/' + post.image_s3} className={post.image_s3 == "null" ? 'hidden' : 'card_image'} alt=" "/>
+                    </div>
                     <div className="info">
                         <h2 className={post.location == "null" ? 'hidden' : 'card_location'}>{post.location}</h2>
                         <p className={post.testo_post == "null" ? 'hidden' : 'card_post'}><span className="titoletto">Post social: </span>{post.testo_post}</p>
@@ -32,10 +39,9 @@ function Fetch() {
                         <p className={post.tag_rekognition == "null" ? 'hidden' : 'card_rekognition'}><span className="titoletto">Rekognition:</span> {post.tag_rekognition}</p>
                         <p className={post.emotion_rekognition == "null" ? 'hidden' : 'card_rekognition'}><span className="titoletto">Emotion Rekognition:</span> {post.emotion_rekognition}</p>
                         <p className={post.category == "null" ? 'hidden' : 'card_category'}><span className="titoletto">Categoria:</span> {post.category}</p>
-                    </div>
-                    <div className={post.web_site == "null" ? 'hidden' : 'social'}>
                         <a className={post.web_site == "null" ? 'hidden' : 'card_website'} href={post.web_site} target="_blank">Vai al sito</a>
                     </div>
+
                 </div>
             ))}
         </div>)
