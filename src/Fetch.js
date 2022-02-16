@@ -14,11 +14,12 @@ function Fetch() {
             .then(res => {
                 console.log(res)
                 setPosts(res.data)
+
             })
             .catch(err => {
                 console.log(err)
             })
-    })
+    }, [])
     return (
         <div className="results">
             {posts.map((post) => (
